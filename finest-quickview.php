@@ -1,0 +1,48 @@
+<?php
+/*
+Plugin Name: Finest Quick View
+Plugin URI: https://github.com/masumskaib396/finest-quickview
+Description: Finest Quick View plugin is a simple and clean design.
+Version: 1.0.0
+Author: finestdevs
+Author URI: https://profiles.wordpress.org/finestdevs/
+License: GPLv2
+Text Domain: finest-quickview
+Domain Path: /languages/
+*/
+
+
+if ( ! defined( 'ABSPATH' ) ) {
+	die;
+}
+
+//Set plugin version constant.
+define( 'FINEST_QUICKVIEW_VERSION', '1.0.0');
+
+define( 'FINEST_QUICKVIEW_INC', plugin_dir_path( __FILE__ ) . 'inc/' );
+define( 'FINEST_QUICKVIEW_MAIN', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+define( 'FINEST_QUICKVIEW_ASSETS_CSS', plugins_url( 'assets/css/', __FILE__ ));
+define( 'FINEST_QUICKVIEW_ASSETS_JS',  plugins_url( 'assets/js/', __FILE__ ));
+
+
+function finest_quickview_view_missing_wc_notice() {
+	echo '<div class="error"><p><strong>' . sprintf( esc_html__( 'Quick View requires WooCommerce to be installed and active. You can download %s here.', 'wc_quick_view' ), '<a href="https://woocommerce.com/" target="_blank">WooCommerce</a>' ) . '</strong></p></div>';
+}
+
+
+function finest_quickview_load_textdomain() {
+    load_plugin_textdomain( 'finest-quickview', false, dirname( __FILE__ ) . '/languages' );
+
+    if ( ! class_exists( 'WooCommerce' ) ) {
+		add_action( 'admin_notices', 'finest_quickview_view_missing_wc_notice' );
+		return;
+	}
+}
+add_action( 'plugins_loaded', 'finest_quickview_load_textdomain' );
+
+// Let's Initialize Everything
+if ( file_exists(  FINEST_QUICKVIEW_MAIN . 'init.php' ) ) {
+	require_once(  FINEST_QUICKVIEW_MAIN . 'init.php' );
+}
+
+
