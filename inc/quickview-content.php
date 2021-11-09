@@ -40,7 +40,7 @@ if ( $product->get_image_id() ){
                             ?>
                                 <div class="finest-quick-thumb-single">
                                     <?php $thumbnail_src = wp_get_attachment_image_src( $attachment_id, 'woocommerce_gallery_thumbnail' );?>
-                                    <img src="<?php echo esc_url($thumbnail_src[0]) ?>" alt="<?php the_title(); ?>">
+                                    <img src="<?php echo esc_url($thumbnail_src[0]); ?>" alt="<?php the_title(); ?>">
                                 </div>
                             <?php
                         }

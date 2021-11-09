@@ -26,7 +26,7 @@ define( 'FINEST_QUICKVIEW_ASSETS_JS',  plugins_url( 'assets/js/', __FILE__ ));
 
 
 function finest_quickview_view_missing_wc_notice() {
-	echo '<div class="error"><p><strong>' . sprintf( esc_html__( 'Quick View requires WooCommerce to be installed and active. You can download %s here.', 'wc_quick_view' ), '<a href="https://woocommerce.com/" target="_blank">WooCommerce</a>' ) . '</strong></p></div>';
+	echo '<div class="error"><p><strong>' . sprintf( esc_html__( 'Quick View requires WooCommerce to be installed and active. You can download %s here.', 'finest-quickview' ), '<a href="https://woocommerce.com/" target="_blank">WooCommerce</a>' ) . '</strong></p></div>';
 }
 
 

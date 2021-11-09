@@ -7,16 +7,12 @@ Tested up to: 5.8.1
 Requires PHP: 5.6
 License: GPl V2
 License URI: https://www.gnu.org/licenses/old-lic.enses/gpl-2.0.en.html
-Stable tag: trunk
+Stable tag: 1.0.0
 
 
 == Description ==
+Finest Quick View plugin is a simple and clean design.
 
-<p>
-
-    Finest Quick View plugin is a simple and clean design.
-
-</p>
 
 == Installation ==
 Installation is fairly straight forward. Install it from the WordPress plugin repository.
