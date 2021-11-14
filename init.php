@@ -31,3 +31,8 @@ add_action( 'wp_enqueue_scripts', 'fqv_register_script' );
 if ( file_exists( FINEST_QUICKVIEW_INC . 'function.php' ) ) {
 	require_once  FINEST_QUICKVIEW_INC . 'function.php';
 }
+
+// Load Setting Functions
+if ( file_exists( FINEST_QUICKVIEW_INC . 'settings.php' ) ) {
+	require_once  FINEST_QUICKVIEW_INC . 'settings.php';
+}
