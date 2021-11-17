@@ -1,15 +1,16 @@
 <?php
 /*
-Plugin Name: Finest Quick View
+Plugin Name: WooCommerce Quick View
 Plugin URI: https://github.com/masumskaib396/finest-quickview
-Description: Finest Quick View plugin is a simple and clean design.
+Description: WooCommerce Quick View plugin is a simple and clean design.
 Version: 1.0.0
-Author: finestdevs
-Author URI: https://profiles.wordpress.org/finestdevs/
+Author: finestwp
+Author URI: http://finestdevs.com
 License: GPLv2
 Text Domain: finest-quickview
 Domain Path: /languages/
 */
+
 
 
 if ( ! defined( 'ABSPATH' ) ) {
