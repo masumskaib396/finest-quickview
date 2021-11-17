@@ -18,30 +18,21 @@ add_action( 'wp_footer', 'finest_quickview_render_infooter' );
 if ( !function_exists( 'finest_quickview_button' ) ) {
 	function finest_quickview_button() {
 
-        $fqv_option = get_option( 'finest_quick_view_trigger' );
-        $enavel_quickview = get_option( 'finest_quick_view_enable','yes');
+
 
         $icon = '<i class="fas fa-eye"></i>';
-        if ( 'icon' == $fqv_option ) {
-           $icontext =  $icon;
-        }
-        elseif ( 'text' == $fqv_option ) {
-           $icontext = __( 'Quick View', 'finest-quickview');
-        }else{
-           $icontext = $icon . __( 'Quick View', 'finest-quickview');
-        }
 
-        if ('yes' === $enavel_quickview) {
+
+
 		$ajaxurl = admin_url('admin-ajax.php');
 	    $nonce = wp_create_nonce('stor_product_load');
         ?>
             <div class="finest-quickview-button">
                 <a href="#" class="storquickview" data-id="<?php echo get_the_ID() ?>" data-url="<?php echo esc_url($ajaxurl) ?>" data-referrar="<?php echo esc_attr( $nonce ) ?>">
-                <?php echo $icontext ?>
+                <?php echo __( 'Quick View', 'finest-quickview') ?>
                 </a>
             </div>
         <?php
-        }
 
 	}
 }

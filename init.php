@@ -31,8 +31,11 @@ add_action( 'wp_enqueue_scripts', 'fqv_register_script' );
 if ( file_exists( FINEST_QUICKVIEW_INC . 'function.php' ) ) {
 	require_once  FINEST_QUICKVIEW_INC . 'function.php';
 }
-
-// Load Setting Functions
-if ( file_exists( FINEST_QUICKVIEW_INC . 'settings.php' ) ) {
-	require_once  FINEST_QUICKVIEW_INC . 'settings.php';
+// Load the Settings Options
+if ( file_exists( FINEST_QUICKVIEW_INC . 'customizer/config.php' ) ) {
+	require_once  FINEST_QUICKVIEW_INC . 'customizer/config.php';
 }
+
+
+
+

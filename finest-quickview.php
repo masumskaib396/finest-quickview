@@ -41,9 +41,18 @@ function finest_quickview_load_textdomain() {
 }
 add_action( 'plugins_loaded', 'finest_quickview_load_textdomain' );
 
+
+
+// Load the library
+if ( file_exists( FINEST_QUICKVIEW_MAIN . 'lib/settings.php' ) ) {
+	require_once  FINEST_QUICKVIEW_MAIN . 'lib/settings.php';
+}
+
 // Let's Initialize Everything
 if ( file_exists(  FINEST_QUICKVIEW_MAIN . 'init.php' ) ) {
 	require_once(  FINEST_QUICKVIEW_MAIN . 'init.php' );
 }
+
+
 
 
