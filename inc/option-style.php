@@ -6,7 +6,10 @@ function fqv_options_scripts(){
 
     $btn_text_color = get_theme_mod( 'btn_text_color', 'fff' );
     $btn_bg_color = get_theme_mod( 'btn_bg_color', '0170B9' );
-
+    $btn_border = get_theme_mod( 'btn_border');
+    $btn_border_radius = get_theme_mod( 'btn_border_radius' );
+    $btn_paddign = get_theme_mod( 'btn_padding' );
+    
 
     $fqv_dynamic_css  = '';
 
@@ -19,6 +22,19 @@ function fqv_options_scripts(){
         $fqv_dynamic_css .= '.storquickview { background-color: ' . esc_attr( $btn_bg_color ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
+    if($btn_border){
+        $fqv_dynamic_css .= '.storquickview { border: ' . esc_attr( $btn_border ) . ' } ';
+        $fqv_dynamic_css .= "\n";
+    }
+    if($btn_paddign){
+        $fqv_dynamic_css .= '.storquickview { padding: ' . esc_attr( $btn_paddign ) . ' } ';
+        $fqv_dynamic_css .= "\n";
+    }
+    if($btn_border_radius){
+        $fqv_dynamic_css .= '.storquickview {  border-radius: ' . esc_attr( $btn_border_radius ) . ' } ';
+        $fqv_dynamic_css .= "\n";
+    }
+
 
 
 

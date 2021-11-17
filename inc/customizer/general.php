@@ -77,7 +77,97 @@ Kirki::add_field( 'finest_panel', [
 	],
 ] );
 
+Kirki::add_field( 'finest_panel', [
+    'type'        => 'switch',
+    'settings'    => 'on_title_view',
+	'label'       => esc_html__( 'Hide/Show Title', 'finest-quickview' ),
+    'section'     => 'finest_settings',
+    'default'     => 'on',
+    'priority'    => 10,
+    'choices'     => [
+        'on'  => esc_html__( 'Enable', 'finest-quickview' ),
+        'off' => esc_html__( 'Disable', 'finest-quickview' ),
+    ],
+] );
 
+Kirki::add_field( 'finest_panel', [
+    'type'        => 'switch',
+    'settings'    => 'on_rating_view',
+	'label'       => esc_html__( 'Hide/Show Rating', 'finest-quickview' ),
+    'section'     => 'finest_settings',
+    'default'     => 'on',
+    'priority'    => 10,
+    'choices'     => [
+        'on'  => esc_html__( 'Enable', 'finest-quickview' ),
+        'off' => esc_html__( 'Disable', 'finest-quickview' ),
+    ],
+] );
+
+Kirki::add_field( 'finest_panel', [
+    'type'        => 'switch',
+    'settings'    => 'on_price_view',
+	'label'       => esc_html__( 'Hide/Show Price', 'finest-quickview' ),
+    'section'     => 'finest_settings',
+    'default'     => 'on',
+    'priority'    => 10,
+    'choices'     => [
+        'on'  => esc_html__( 'Enable', 'finest-quickview' ),
+        'off' => esc_html__( 'Disable', 'finest-quickview' ),
+    ],
+] );
+
+Kirki::add_field( 'finest_panel', [
+    'type'        => 'switch',
+    'settings'    => 'on_decription_view',
+	'label'       => esc_html__( 'Hide/Show Excerpt', 'finest-quickview' ),
+    'section'     => 'finest_settings',
+    'default'     => 'on',
+    'priority'    => 10,
+    'choices'     => [
+        'on'  => esc_html__( 'Enable', 'finest-quickview' ),
+        'off' => esc_html__( 'Disable', 'finest-quickview' ),
+    ],
+] );
+
+
+Kirki::add_field( 'finest_panel', [
+    'type'        => 'switch',
+    'settings'    => 'on_quantity_view',
+	'label'       => esc_html__( 'Hide/Show Quantity', 'finest-quickview' ),
+    'section'     => 'finest_settings',
+    'default'     => 'on',
+    'priority'    => 10,
+    'choices'     => [
+        'on'  => esc_html__( 'Enable', 'finest-quickview' ),
+        'off' => esc_html__( 'Disable', 'finest-quickview' ),
+    ],
+] );
+
+Kirki::add_field( 'finest_panel', [
+    'type'        => 'switch',
+    'settings'    => 'on_meta_view',
+	'label'       => esc_html__( 'Hide/Show Meta', 'finest-quickview' ),
+    'section'     => 'finest_settings',
+    'default'     => 'on',
+    'priority'    => 10,
+    'choices'     => [
+        'on'  => esc_html__( 'Enable', 'finest-quickview' ),
+        'off' => esc_html__( 'Disable', 'finest-quickview' ),
+    ],
+] );
+
+Kirki::add_field( 'finest_panel', [
+    'type'        => 'switch',
+    'settings'    => 'on_sharing_view',
+	'label'       => esc_html__( 'Hide/Show Sharing', 'finest-quickview' ),
+    'section'     => 'finest_settings',
+    'default'     => 'on',
+    'priority'    => 10,
+    'choices'     => [
+        'on'  => esc_html__( 'Enable', 'finest-quickview' ),
+        'off' => esc_html__( 'Disable', 'finest-quickview' ),
+    ],
+] );
 
 
 

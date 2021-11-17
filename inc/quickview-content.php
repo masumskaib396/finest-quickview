@@ -3,6 +3,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+$titelshow = get_theme_mod( 'on_title_view' );
+$ratingshow = get_theme_mod( 'on_rating_view' );
+$priceshow = get_theme_mod( 'on_price_view' );
+$descshow = get_theme_mod( 'on_decription_view' );
+$quantityshow = get_theme_mod( 'on_quantity_view' );
+$metashow = get_theme_mod( 'on_meta_view' );
+$sharingshow = get_theme_mod( 'on_sharing_view' );
+
+
 global $product;
 $attachment_ids = $product->get_gallery_image_ids() ? $product->get_gallery_image_ids() : array();
 if ( $product->get_image_id() ){
@@ -55,14 +64,27 @@ if ( $product->get_image_id() ){
             <?php do_action( 'finest_quick_quickview_before_summary' ); ?>
             <div class="entry-summary">
                 <?php
+                   if ( true === $titelshow ) {
                     add_action( 'finest_quick_content', 'woocommerce_template_single_title', 5 );
+                   }
+                   if ( true === $ratingshow ) {
                     add_action( 'finest_quick_content', 'woocommerce_template_single_rating', 10 );
+                   }
+                    if ( true === $priceshow ) {
                     add_action( 'finest_quick_content', 'woocommerce_template_single_price', 10 );
+                    }
+                    if ( true === $descshow ) {
                     add_action( 'finest_quick_content', 'woocommerce_template_single_excerpt', 20 );
+                    }
+                    if ( true === $quantityshow ) {
                     add_action( 'finest_quick_content', 'woocommerce_template_single_add_to_cart', 30 );
+                    }
+                    if ( true === $metashow ) {
                     add_action( 'finest_quick_content', 'woocommerce_template_single_meta', 40 );
+                    }
+                    if ( true === $sharingshow ) {
                     add_action( 'finest_quick_content', 'woocommerce_template_single_sharing', 50 );
-
+                    }
                     // Render Content
                     do_action( 'finest_quick_content' );
                 ?>
