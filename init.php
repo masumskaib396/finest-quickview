@@ -11,7 +11,7 @@ function fqv_register_script(){
 	wp_enqueue_style('bootstrap-min', FINEST_QUICKVIEW_ASSETS_CSS . 'bootstrap.min.css',array(), '5.1.3' );
 	wp_enqueue_style('slick-css', FINEST_QUICKVIEW_ASSETS_CSS . 'slick.css', array(), '2.0' );
 	wp_enqueue_style('slick-theme', FINEST_QUICKVIEW_ASSETS_CSS . 'slick-theme.css', array(), '2.0' );
-	wp_enqueue_style('finest-quick-view', FINEST_QUICKVIEW_ASSETS_CSS . 'quick-view.css',array(), FINEST_QUICKVIEW_VERSION );
+	wp_enqueue_style('finest-quick-view', FINEST_QUICKVIEW_ASSETS_CSS . 'quick-view.css',array(), time() );
 
 	// Enqueue All Js file
 	wp_enqueue_script('fontawesome-min', FINEST_QUICKVIEW_ASSETS_JS . 'all.min.js', array('jquery'), '5.15.4'  ,true);
@@ -30,6 +30,11 @@ add_action( 'wp_enqueue_scripts', 'fqv_register_script' );
 // Load the Functions
 if ( file_exists( FINEST_QUICKVIEW_INC . 'function.php' ) ) {
 	require_once  FINEST_QUICKVIEW_INC . 'function.php';
+}
+
+// Load the Functions
+if ( file_exists( FINEST_QUICKVIEW_INC . 'option-style.php' ) ) {
+	require_once  FINEST_QUICKVIEW_INC . 'option-style.php';
 }
 // Load the Settings Options
 if ( file_exists( FINEST_QUICKVIEW_INC . 'customizer/config.php' ) ) {

@@ -875,4 +875,12 @@
   width: auto;
 }
 
+.switch .customize-control-title {
+  display: block !important;
+  margin-bottom: 18px !important;
+}
+.customize-control-title{
+  display: block !important;
+}
+
 /*# sourceMappingURL=styles.css.map */

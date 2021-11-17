@@ -7,17 +7,7 @@ Kirki::add_section( 'finest_settings', array(
 ) );
 
 
-Kirki::add_field( 'finest_panel', [
-    'type'        => 'switch',
-    'settings'    => 'on_quick_view',
-    'section'     => 'finest_settings',
-    'default'     => 'on',
-    'priority'    => 10,
-    'choices'     => [
-        'on'  => esc_html__( 'Enable', 'finest-quickview' ),
-        'off' => esc_html__( 'Disable', 'finest-quickview' ),
-    ],
-] );
+
 
 Kirki::add_field( 'finest_panel', [
 	'type'     => 'text',
@@ -43,6 +33,52 @@ Kirki::add_field( 'finest_panel', [
 		'icon_text' => esc_html__( 'Icon with Button', 'finest-quickview' ),
 	],
 ] );
+
+Kirki::add_field( 'finest_panel', [
+    'type'        => 'switch',
+    'settings'    => 'on_quick_view',
+	'label'       => esc_html__( 'Hide/Show Quick View', 'finest-quickview' ),
+    'section'     => 'finest_settings',
+    'default'     => 'on',
+    'priority'    => 10,
+    'choices'     => [
+        'on'  => esc_html__( 'Enable', 'finest-quickview' ),
+        'off' => esc_html__( 'Disable', 'finest-quickview' ),
+    ],
+] );
+
+Kirki::add_field( 'finest_panel', [
+	'type'        => 'select',
+	'settings'    => 'tablate_option',
+	'label'       => esc_html__( 'Show/Hide Quick view on tablate', 'finest-quickview' ),
+	'section'     => 'finest_settings',
+	'default'     => 'tablate_show',
+	'placeholder' => esc_html__( 'Select an option...', 'finest-quickview' ),
+	'priority'    => 10,
+	'multiple'    => 1,
+	'choices'     => [
+		'tablate_show' => esc_html__( 'Show', 'finest-quickview' ),
+		'tablate_hide' => esc_html__( 'Hide', 'finest-quickview' ),
+	],
+] );
+
+Kirki::add_field( 'finest_panel', [
+	'type'        => 'select',
+	'settings'    => 'mobile_option',
+	'label'       => esc_html__( 'Show/Hide Quick view on Mobile', 'finest-quickview' ),
+	'section'     => 'finest_settings',
+	'default'     => 'mobile_show',
+	'placeholder' => esc_html__( 'Select an option...', 'finest-quickview' ),
+	'priority'    => 10,
+	'multiple'    => 1,
+	'choices'     => [
+		'mobile_show' => esc_html__( 'Show', 'finest-quickview' ),
+		'mobile_hide' => esc_html__( 'Hide', 'finest-quickview' ),
+	],
+] );
+
+
+
 
 
 
