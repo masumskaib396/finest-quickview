@@ -20,29 +20,30 @@ Kirki::add_field( 'finest_panel', [
 ] );
 
 Kirki::add_field( 'finest_panel', [
+	'type'     => 'text',
+	'settings' => 'change_button_text',
+	'label'    => esc_html__( 'Change Text on Button', 'finest-quickview' ),
+	'section'  => 'finest_settings',
+	'default'  => esc_html__( 'Quick View', 'finest-quickview' ),
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'finest_panel', [
 	'type'        => 'select',
-	'settings'    => 'new',
-	'label'       => esc_html__( 'This is the label', 'finest-quickview' ),
+	'settings'    => 'qucik_view_style',
+	'label'       => esc_html__( 'Quick View Style', 'finest-quickview' ),
 	'section'     => 'finest_settings',
-	'default'     => 'option-1',
+	'default'     => 'only_text',
 	'placeholder' => esc_html__( 'Select an option...', 'finest-quickview' ),
 	'priority'    => 10,
 	'multiple'    => 1,
 	'choices'     => [
-		'option-1' => esc_html__( 'Option 1', 'finest-quickview' ),
-		'option-2' => esc_html__( 'Option 2', 'finest-quickview' ),
-		'option-3' => esc_html__( 'Option 3', 'finest-quickview' ),
-		'option-4' => esc_html__( 'Option 4', 'finest-quickview' ),
+		'only_text' => esc_html__( 'Text', 'finest-quickview' ),
+		'only_icon' => esc_html__( 'Icon', 'finest-quickview' ),
+		'icon_text' => esc_html__( 'Icon with Button', 'finest-quickview' ),
 	],
 ] );
 
-Kirki::add_field( 'finest_panel', [
-	'type'     => 'textarea',
-	'settings' => 'hello',
-	'label'    => esc_html__( 'Textarea Control', 'kirki' ),
-	'section'  => 'finest_settings',
-	'default'  => esc_html__( 'This is a default value', 'kirki' ),
-	'priority' => 10,
-] );
+
 
 
