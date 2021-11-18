@@ -51,7 +51,7 @@ if ( !function_exists( 'finest_quickview_button' ) ) {
             <?php
 	}
 }
-add_action('woocommerce_after_shop_loop_item', 'finest_quickview_button', 35);
+add_action('woocommerce_after_shop_loop_item', 'finest_quickview_button', 20);
 
 
 // Lode Ajax Content Data

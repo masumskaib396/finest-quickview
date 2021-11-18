@@ -11,7 +11,6 @@ $quantityshow = get_theme_mod( 'on_quantity_view' );
 $metashow = get_theme_mod( 'on_meta_view' );
 $sharingshow = get_theme_mod( 'on_sharing_view' );
 
-
 global $product;
 $attachment_ids = $product->get_gallery_image_ids() ? $product->get_gallery_image_ids() : array();
 if ( $product->get_image_id() ){
@@ -64,9 +63,9 @@ if ( $product->get_image_id() ){
             <?php do_action( 'finest_quick_quickview_before_summary' ); ?>
             <div class="entry-summary">
                 <?php
-                   if ( true === $titelshow ) {
-                    add_action( 'finest_quick_content', 'woocommerce_template_single_title', 5 );
-                   }
+                   if ( true === $titelshow ) { 
+                     add_action( 'finest_quick_content', 'woocommerce_template_single_title', 5 ); 
+                    }
                    if ( true === $ratingshow ) {
                     add_action( 'finest_quick_content', 'woocommerce_template_single_rating', 10 );
                    }
