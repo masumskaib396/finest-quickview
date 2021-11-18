@@ -56,7 +56,8 @@ jQuery(document).ready(function($){
             },
             complete: function () {
                 $('#fdquick-viewmodal').removeClass('stloading');
-                $('.fdqv-modal-dialog').css("background-color","#ffffff");
+                // $('.fdqv-modal-dialog').css("background-color","#ffffff");
+                $('.fdqv-modal-dialog').addClass("modal-style");
             },
             error: function () {
                 console.log("Quick View Not Loaded");
@@ -67,7 +68,8 @@ jQuery(document).ready(function($){
     $('.fdqvcloseqv').on('click', function(event){
         $('#fdquick-viewmodal').removeClass('storquickview-open');
         $('body').removeClass('storquickview');
-        $('.fdqv-modal-dialog').css("background-color","transparent");
+        // $('.fdqv-modal-dialog').css("background-color","transparent");
+        $('.fdqv-modal-dialog').removeClass("modal-style");
     });
 
 

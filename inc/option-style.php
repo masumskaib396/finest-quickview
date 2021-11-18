@@ -23,6 +23,10 @@ function fqv_options_scripts(){
     $btn_margin = get_theme_mod( 'btn_margin' );
     $marimpld = implode(' ',$btn_margin);
 
+    // modal
+     $mbgcolor = get_theme_mod( 'modal_background_color','#ffffff' );
+    $modal_margin = get_theme_mod( 'modal_margin' );
+    $immodal_margin = implode(' ',$modal_margin);
 
     $fqv_dynamic_css  = '';
 
@@ -87,8 +91,16 @@ function fqv_options_scripts(){
         $fqv_dynamic_css .= "\n";
     }
 
+    // Modal
 
-
+    if($mbgcolor){
+         $fqv_dynamic_css .= '.modal-style{  background-color: ' . esc_attr( $mbgcolor ) . '} ';
+         $fqv_dynamic_css .= "\n";
+     }
+    if($immodal_margin){
+        $fqv_dynamic_css .= '#fdquick-viewmodal .fdqv-modal-dialog{  padding: ' . esc_attr( $immodal_margin ) . '} ';
+        $fqv_dynamic_css .= "\n";
+    }
 
 
     $fqv_dynamic_css = fqv_css_strip_whitespace( $fqv_dynamic_css );

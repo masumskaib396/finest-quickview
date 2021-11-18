@@ -278,6 +278,10 @@ a.storquickview svg {
     margin-right: 5px;
 }
 
+.modal-style {
+    background-color:#fff;
+} 
+
 @media only screen and (min-width: 768px) and (max-width: 911px) {
     .tablate_hide {
         display: none;

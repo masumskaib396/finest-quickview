@@ -5,16 +5,46 @@
 		'priority'       => 160,
 	) );
 
+
+	// mmodal content
+	Kirki::add_field( 'finest_panel', [
+		'type'        => 'color',
+		'settings'    => 'modal_background_color',
+		'label'       => __( 'Modal Background Color', 'finest-quickview' ),
+		'description' => esc_html__( 'This is a color control - with alpha channel.', 'finest-quickview' ),
+		'section'     => 'finest_styles',
+		'default'     => '#0088CC',
+		'choices'     => [
+			'alpha' => true,
+		],
+	] );
+
+	Kirki::add_field( 'finest_panel', [
+		'type'        => 'dimensions',
+		'settings'    => 'modal_margin',
+		'description' => esc_html__( 'Apply Modal Padding', 'finest-quickview' ),
+		'label'       => esc_html__( 'Modal Padding', 'finest-quickview' ),
+		'section'     => 'finest_styles',
+		'default'     => [
+			'padding-top'    => '0px',
+			'padding-right' => '0px',
+			'padding-bottom'   => '0px',
+			'padding-left'  => '0px',
+		],
+		
+	] );
+
+
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'radio-buttonset',
 		'settings'    => 'button_normal_hover',
-		'label'       => esc_html__( 'Button Hover Normal', 'kirki' ),
+		'label'       => esc_html__( 'Control Content', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     => 'button_normal',
 		'priority'    => 10,
 		'choices'     => [
-			'button_normal'   => esc_html__( 'Normal', 'kirki' ),
-			'button_hover' => esc_html__( 'Hover', 'kirki' ),
+			'button_normal'   => esc_html__( 'Normal', 'finest-quickview' ),
+			'button_hover' => esc_html__( 'Hover', 'finest-quickview' ),
 		],
 	] );
 
