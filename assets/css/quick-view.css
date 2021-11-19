@@ -1,6 +1,9 @@
 /*****************************
         Core css
 ******************************/
+* {
+    box-sizing: border-box;
+}
 .storquickview {
     padding: 9px 16px 9px 16px;
     text-align: center;
