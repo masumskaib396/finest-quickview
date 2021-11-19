@@ -18,8 +18,8 @@ if ( $product->get_image_id() ){
 }
 
 ?>
-<div class="row">
-    <div class="col-md-5 col-12">
+<div class="finest-content">
+    <div class="finest-left-side">
     	<div class="finest-qwick-view-left">
             <div class="woocommerce finest-quick-view-learg-img">
              <?php
@@ -58,7 +58,7 @@ if ( $product->get_image_id() ){
         </div>
     </div>
 
-    <div class="col-md-7 col-12">
+    <div class="finest-right-side">
         <div class="finest-quick-view-right">
             <?php do_action( 'finest_quick_quickview_before_summary' ); ?>
             <div class="entry-summary">

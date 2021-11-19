@@ -42,6 +42,26 @@ Kirki::add_field( 'finest_panel', [
 ] );
 
 Kirki::add_field( 'finest_panel', [
+    'type'        => 'switch',
+    'settings'    => 'on_close_button',
+	'label'       => esc_html__( 'Show Close Button', 'finest-quickview' ),
+    'section'     => 'finest_settings',
+    'default'     => 'on',
+    'priority'    => 10,
+    'choices'     => [
+        'on'  => esc_html__( 'Enable', 'finest-quickview' ),
+        'off' => esc_html__( 'Disable', 'finest-quickview' ),
+    ],
+    'active_callback' => [
+        [
+            'setting'  => 'all_devices',
+            'operator' => '===',
+            'value'    => 'desktop',
+        ],
+    ],
+] );
+
+Kirki::add_field( 'finest_panel', [
 	'type'     => 'text',
 	'settings' => 'change_button_text',
 	'label'    => esc_html__( 'Change Text on Button', 'finest-quickview' ),

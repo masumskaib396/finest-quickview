@@ -2,15 +2,18 @@
 
 // ICON
 function finest_quickview_quickview_render_infooter() {
-	echo '<div class="woocommerce" id="fdquick-viewmodal">
-           <div class="fdqv-modal-dialog product">
-               <div class="fdqv-modal-content">
-                   <button type="button" class="fdqvcloseqv"><i class="fas fa-times"></i></button>
-                   <div class="fdqv-modal-body">
-                   </div>
+    $closebutton = get_theme_mod( 'on_close_button' ); 
+    ?>
+	<div class="woocommerce" id="fdquick-viewmodal">
+        <div class="fdqv-modal-dialog product">
+            <div class="fdqv-modal-content">  
+                <button type="button" class="fdqvcloseqv"><i class="fas fa-times"></i></button>
+                <div class="fdqv-modal-body">
                 </div>
             </div>
-        </div>';
+        </div>
+    </div>';
+<?php     
 }
 add_action( 'wp_footer', 'finest_quickview_quickview_render_infooter' );
 

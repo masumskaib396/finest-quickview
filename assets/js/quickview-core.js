@@ -72,6 +72,11 @@ jQuery(document).ready(function($){
         $('.fdqv-modal-dialog').removeClass("modal-style");
     });
 
+    $( 'body' ).on( 'click tap', '.storquickview-open', function() {
+		$('#fdquick-viewmodal').removeClass('storquickview-open');
+        $('body').removeClass('storquickview');
+        $('.fdqv-modal-dialog').removeClass("modal-style");
+	} );
 
 
     function storCartQtyBtn() {

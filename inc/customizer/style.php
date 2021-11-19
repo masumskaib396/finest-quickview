@@ -48,7 +48,6 @@
 		],
 	] );
 
-	
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'color',
 		'settings'    => 'btn_text_color',
@@ -89,14 +88,14 @@
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'radio-buttonset',
 		'settings'    => 'btn_border_property',
-		'label'       => esc_html__( 'Border Property', 'kirki' ),
+		'label'       => esc_html__( 'Border Property', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     => 'border',
 		'priority'    => 10,
 		'choices'     => [
-			'border'   => esc_html__( 'Border', 'kirki' ),
-			'style' => esc_html__( 'Style', 'kirki' ),
-			'color'  => esc_html__( 'Color', 'kirki' ),
+			'border'   => esc_html__( 'Border', 'finest-quickview' ),
+			'style' => esc_html__( 'Style', 'finest-quickview' ),
+			'color'  => esc_html__( 'Color', 'finest-quickview' ),
 		],
 		'active_callback' => [
 			[
@@ -110,8 +109,8 @@
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'dimension',
 		'settings'    => 'btn_border',
-		'label'       => esc_html__( 'Button Border', 'kirki' ),
-		'description' => esc_html__( 'Apply Button Border.', 'kirki' ),
+		'label'       => esc_html__( 'Button Border', 'finest-quickview' ),
+		'description' => esc_html__( 'Apply Button Border.', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     =>'1px',
 		'active_callback' => [
@@ -130,23 +129,23 @@
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'select',
 		'settings'    => 'btn_border_style',
-		'label'       => esc_html__( 'Border Style', 'kirki' ),
+		'label'       => esc_html__( 'Border Style', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     => 'solid',
-		'placeholder' => esc_html__( 'Select an option...', 'kirki' ),
+		'placeholder' => esc_html__( 'Select an option...', 'finest-quickview' ),
 		'priority'    => 10,
 		'multiple'    => 1,
 		'choices'     => [
-			'none' => esc_html__( 'None', 'kirki' ),
-			'dotted' => esc_html__( 'Dotted', 'kirki' ),
-			'dashed' => esc_html__( 'Dashed', 'kirki' ),
-			'solid' => esc_html__( 'Solid', 'kirki' ),
-			'double' => esc_html__( 'Double', 'kirki' ),
-			'groove' => esc_html__( 'Groove', 'kirki' ),
-			'ridge' => esc_html__( 'Ridge', 'kirki' ),
-			'inset' => esc_html__( 'Inset', 'kirki' ),
-			'outset' => esc_html__( 'Outset', 'kirki' ),
-			'initial' => esc_html__( 'Initial', 'kirki' ),
+			'none' => esc_html__( 'None', 'finest-quickview' ),
+			'dotted' => esc_html__( 'Dotted', 'finest-quickview' ),
+			'dashed' => esc_html__( 'Dashed', 'finest-quickview' ),
+			'solid' => esc_html__( 'Solid', 'finest-quickview' ),
+			'double' => esc_html__( 'Double', 'finest-quickview' ),
+			'groove' => esc_html__( 'Groove', 'finest-quickview' ),
+			'ridge' => esc_html__( 'Ridge', 'finest-quickview' ),
+			'inset' => esc_html__( 'Inset', 'finest-quickview' ),
+			'outset' => esc_html__( 'Outset', 'finest-quickview' ),
+			'initial' => esc_html__( 'Initial', 'finest-quickview' ),
 		],
 		'active_callback' => [
 			[
@@ -165,8 +164,8 @@
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'color',
 		'settings'    => 'btn_border_color',
-		'label'       => __( 'Color Control (with alpha channel)', 'kirki' ),
-		'description' => esc_html__( 'This is a color control - with alpha channel.', 'kirki' ),
+		'label'       => __( 'Color Control (with alpha channel)', 'finest-quickview' ),
+		'description' => esc_html__( 'This is a color control - with alpha channel.', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     => '#0088CC',
 		'choices'     => [
@@ -189,8 +188,8 @@
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'dimensions',
 		'settings'    => 'btn_margin',
-		'description' => esc_html__( 'Apply Button Margin', 'kirki' ),
-		'label'       => esc_html__( 'Button Margin', 'kirki' ),
+		'description' => esc_html__( 'Apply Button Margin', 'finest-quickview' ),
+		'label'       => esc_html__( 'Button Margin', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     => [
 			'margin-top'    => '0px',
@@ -210,8 +209,8 @@
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'dimensions',
 		'settings'    => 'btn_padding',
-		'description' => esc_html__( 'Apply Button Padding', 'kirki' ),
-		'label'       => esc_html__( 'Button Padding', 'kirki' ),
+		'description' => esc_html__( 'Apply Button Padding', 'finest-quickview' ),
+		'label'       => esc_html__( 'Button Padding', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     => [
 			'padding-top'    => '10px',
@@ -231,8 +230,8 @@
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'dimension',
 		'settings'    => 'btn_border_radius',
-		'label'       => esc_html__( 'Button Radius', 'kirki' ),
-		'description' => esc_html__( 'Apply Button Radius', 'kirki' ),
+		'label'       => esc_html__( 'Button Radius', 'finest-quickview' ),
+		'description' => esc_html__( 'Apply Button Radius', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     =>'5px',
 		'active_callback' => [
@@ -284,14 +283,14 @@
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'radio-buttonset',
 		'settings'    => 'btn_hover_border_property',
-		'label'       => esc_html__( 'Border Property', 'kirki' ),
+		'label'       => esc_html__( 'Border Property', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     => 'border',
 		'priority'    => 10,
 		'choices'     => [
-			'border'   => esc_html__( 'Border', 'kirki' ),
-			'style' => esc_html__( 'Style', 'kirki' ),
-			'color'  => esc_html__( 'Color', 'kirki' ),
+			'border'   => esc_html__( 'Border', 'finest-quickview' ),
+			'style' => esc_html__( 'Style', 'finest-quickview' ),
+			'color'  => esc_html__( 'Color', 'finest-quickview' ),
 		],
 		'active_callback' => [
 			[
@@ -305,8 +304,8 @@
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'dimension',
 		'settings'    => 'hover_btn_border',
-		'label'       => esc_html__( 'Button Border', 'kirki' ),
-		'description' => esc_html__( 'Apply Button Border.', 'kirki' ),
+		'label'       => esc_html__( 'Button Border', 'finest-quickview' ),
+		'description' => esc_html__( 'Apply Button Border.', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     =>'1px',
 		'active_callback' => [
@@ -326,29 +325,29 @@
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'select',
 		'settings'    => 'btn_hover_border_style',
-		'label'       => esc_html__( 'Border Style', 'kirki' ),
+		'label'       => esc_html__( 'Border Style', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     => 'solid',
-		'placeholder' => esc_html__( 'Select an option...', 'kirki' ),
+		'placeholder' => esc_html__( 'Select an option...', 'finest-quickview' ),
 		'priority'    => 10,
 		'multiple'    => 1,
 		'choices'     => [
-			'none' => esc_html__( 'None', 'kirki' ),
-			'dotted' => esc_html__( 'Dotted', 'kirki' ),
-			'dashed' => esc_html__( 'Dashed', 'kirki' ),
-			'solid' => esc_html__( 'Solid', 'kirki' ),
-			'double' => esc_html__( 'Double', 'kirki' ),
-			'groove' => esc_html__( 'Groove', 'kirki' ),
-			'ridge' => esc_html__( 'Ridge', 'kirki' ),
-			'inset' => esc_html__( 'Inset', 'kirki' ),
-			'outset' => esc_html__( 'Outset', 'kirki' ),
-			'initial' => esc_html__( 'Initial', 'kirki' ),
+			'none' => esc_html__( 'None', 'finest-quickview' ),
+			'dotted' => esc_html__( 'Dotted', 'finest-quickview' ),
+			'dashed' => esc_html__( 'Dashed', 'finest-quickview' ),
+			'solid' => esc_html__( 'Solid', 'finest-quickview' ),
+			'double' => esc_html__( 'Double', 'finest-quickview' ),
+			'groove' => esc_html__( 'Groove', 'finest-quickview' ),
+			'ridge' => esc_html__( 'Ridge', 'finest-quickview' ),
+			'inset' => esc_html__( 'Inset', 'finest-quickview' ),
+			'outset' => esc_html__( 'Outset', 'finest-quickview' ),
+			'initial' => esc_html__( 'Initial', 'finest-quickview' ),
 		],
 		'active_callback' => [
 			[
 				'setting'  => 'button_normal_hover',
 				'operator' => '===',
-				'value'    => 'button_normal',
+				'value'    => 'button_hover',
 			],
 			[
 				'setting'  => 'btn_hover_border_property',
@@ -361,8 +360,8 @@
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'color',
 		'settings'    => 'btn_hover_border_color',
-		'label'       => __( 'Color Control (with alpha channel)', 'kirki' ),
-		'description' => esc_html__( 'This is a color control - with alpha channel.', 'kirki' ),
+		'label'       => __( 'Color Control (with alpha channel)', 'finest-quickview' ),
+		'description' => esc_html__( 'This is a color control - with alpha channel.', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     => '#0088CC',
 		'choices'     => [
@@ -371,12 +370,12 @@
 		'active_callback' => [
 			[
 				'setting'  => 'button_normal_hover',
-				'operator' => '===',
-				'value'    => 'button_normal',
+				'operator' => '==',
+				'value'    => 'button_hover',
 			],
 			[
 				'setting'  => 'btn_hover_border_property',
-				'operator' => '===',
+				'operator' => '==',
 				'value'    => 'color',
 			],
 		],
@@ -385,8 +384,8 @@
 	Kirki::add_field( 'finest_panel', [
 		'type'        => 'dimension',
 		'settings'    => 'hover_btn_border_radius',
-		'label'       => esc_html__( 'Button Radius', 'kirki' ),
-		'description' => esc_html__( 'Apply Button Radius', 'kirki' ),
+		'label'       => esc_html__( 'Button Radius', 'finest-quickview' ),
+		'description' => esc_html__( 'Apply Button Radius', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     =>'5px',
 		'active_callback' => [
