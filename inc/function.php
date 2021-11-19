@@ -1,24 +1,52 @@
 <?php
 
 // Button Icon
-function finest_quickview_render_infooter() {
-	echo '<div class="woocommerce" id="fdquick-viewmodal">
-           <div class="fdqv-modal-dialog product">
-               <div class="fdqv-modal-content">
-                   <button type="button" class="fdqvcloseqv"><i class="fas fa-times"></i></button>
-                   <div class="fdqv-modal-body">
-                   </div>
+function finest_quickview_render_infooter() { 
+    $showhide = get_theme_mod( 'modal_close_button');
+    ?>
+    
+	<div class="woocommerce" id="fdquick-viewmodal">
+        <div class="fdqv-modal-dialog product">
+            <div class="fdqv-modal-content">
+                <?php if ( $showhide ): ?>
+                <button type="button" class="fdqvcloseqv"><span class="dashicons dashicons-no-alt"></span></button>
+                <?php endif; ?>
+                <div class="fdqv-modal-body">
                 </div>
             </div>
-        </div>';
+        </div>
+    </div>';
+<?php        
 }
 add_action( 'wp_footer', 'finest_quickview_render_infooter' );
+
+$option = get_theme_mod( 'quickview_option' );
+switch ($option) {
+    case 'before_title':
+        add_action( 'woocommerce_shop_loop_item_title', 'finest_quickview_button', 9 );
+        break;
+    case 'after_title':
+        add_action( 'woocommerce_after_shop_loop_item_title', 'finest_quickview_button', 10 );
+        break;
+    case 'after_rating':
+        add_action( 'woocommerce_shop_loop_item_title', 'finest_quickview_button', 6 );
+        break;
+    case 'after_price':
+        add_action( 'woocommerce_shop_loop_item_title', 'finest_quickview_button', 11 );
+        break;
+    case 'before_add_to_cart':
+        add_action( 'woocommerce_after_shop_loop_item', 'finest_quickview_button', 9 );
+        break;
+    case 'after_add_to_cart':
+        add_action( 'woocommerce_after_shop_loop_item', 'finest_quickview_button', 11 );
+        break;
+}
 
 // Button
 if ( !function_exists( 'finest_quickview_button' ) ) {
 	function finest_quickview_button() {
 
-        $icon = '<i class="fas fa-eye"></i>';
+        $icon = '<span class="dashicons dashicons-visibility"></span>';
         $showhide = get_theme_mod( 'on_quick_view');
         $btntext = get_theme_mod( 'change_button_text');
         $btnstyle = get_theme_mod( 'qucik_view_style' ,'only_text' );
@@ -39,7 +67,7 @@ if ( !function_exists( 'finest_quickview_button' ) ) {
             $f_content = '';
         };
 
-
+        if ( true == $showhide ){
         $ajaxurl = admin_url('admin-ajax.php');
         $nonce = wp_create_nonce('stor_product_load');
             ?>
@@ -49,9 +77,10 @@ if ( !function_exists( 'finest_quickview_button' ) ) {
                     </a>
                 </div>
             <?php
+        }
 	}
 }
-add_action('woocommerce_after_shop_loop_item', 'finest_quickview_button', 20);
+// add_action('woocommerce_after_shop_loop_item', 'finest_quickview_button', 20);
 
 
 // Lode Ajax Content Data
