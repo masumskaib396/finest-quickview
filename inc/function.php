@@ -25,18 +25,6 @@ switch ($option) {
     case 'before_title':
         add_action( 'woocommerce_shop_loop_item_title', 'finest_quickview_button', 9 );
         break;
-    case 'after_title':
-        add_action( 'woocommerce_after_shop_loop_item_title', 'finest_quickview_button', 10 );
-        break;
-    case 'after_rating':
-        add_action( 'woocommerce_shop_loop_item_title', 'finest_quickview_button', 6 );
-        break;
-    case 'after_price':
-        add_action( 'woocommerce_shop_loop_item_title', 'finest_quickview_button', 11 );
-        break;
-    case 'before_add_to_cart':
-        add_action( 'woocommerce_after_shop_loop_item', 'finest_quickview_button', 9 );
-        break;
     case 'after_add_to_cart':
         add_action( 'woocommerce_after_shop_loop_item', 'finest_quickview_button', 11 );
         break;

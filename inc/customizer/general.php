@@ -31,10 +31,6 @@ Kirki::add_field( 'finest_panel', [
 	'multiple'    => 1,
 	'choices'     => [
 		'before_title' => esc_html__( 'Before Title', 'finest-quickview' ),
-		'after_title' => esc_html__( 'After Title', 'finest-quickview' ),
-		'after_rating' => esc_html__( 'After Rating', 'finest-quickview' ),
-		'after_price' => esc_html__( 'After Price', 'finest-quickview' ),
-		'before_add_to_cart' => esc_html__( 'Before Add to Cart', 'finest-quickview' ),
 		'after_add_to_cart' => esc_html__( 'After add_to_cart', 'finest-quickview' ),
 	],
    
