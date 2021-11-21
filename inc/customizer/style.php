@@ -26,10 +26,10 @@
 		'label'       => esc_html__( 'Modal Padding', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     => [
-			'padding-top'    => '0px',
-			'padding-right' => '0px',
-			'padding-bottom'   => '0px',
-			'padding-left'  => '0px',
+			'padding-top'    => '35px',
+			'padding-right' => '35px',
+			'padding-bottom'   => '35px',
+			'padding-left'  => '35px',
 		],
 		
 	] );
@@ -112,7 +112,7 @@
 		'label'       => esc_html__( 'Button Border', 'finest-quickview' ),
 		'description' => esc_html__( 'Apply Button Border.', 'finest-quickview' ),
 		'section'     => 'finest_styles',
-		'default'     =>'1px',
+		'default'     =>'0px',
 		'active_callback' => [
 			[
 				'setting'  => 'button_normal_hover',
@@ -213,9 +213,9 @@
 		'label'       => esc_html__( 'Button Padding', 'finest-quickview' ),
 		'section'     => 'finest_styles',
 		'default'     => [
-			'padding-top'    => '10px',
+			'padding-top'    => '14px',
 			'padding-right' => '15px',
-			'padding-bottom'   => '10px',
+			'padding-bottom'   => '14px',
 			'padding-left'  => '15px',
 		],
 		'active_callback' => [
@@ -233,7 +233,7 @@
 		'label'       => esc_html__( 'Button Radius', 'finest-quickview' ),
 		'description' => esc_html__( 'Apply Button Radius', 'finest-quickview' ),
 		'section'     => 'finest_styles',
-		'default'     =>'5px',
+		'default'     =>'0px',
 		'active_callback' => [
 			[
 				'setting'  => 'button_normal_hover',
@@ -307,7 +307,7 @@
 		'label'       => esc_html__( 'Button Border', 'finest-quickview' ),
 		'description' => esc_html__( 'Apply Button Border.', 'finest-quickview' ),
 		'section'     => 'finest_styles',
-		'default'     =>'1px',
+		'default'     =>'0px',
 		'active_callback' => [
 			[
 				'setting'  => 'button_normal_hover',

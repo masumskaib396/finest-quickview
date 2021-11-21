@@ -2,7 +2,7 @@
 
 // Button Icon
 function finest_quickview_render_infooter() {
-    $showhide = get_theme_mod( 'modal_close_button');
+    $showhide = get_theme_mod( 'modal_close_button',true);
     ?>
 
 	<div class="woocommerce" id="fdquick-viewmodal">
@@ -26,12 +26,12 @@ add_action( 'wp_footer', 'finest_quickview_render_infooter' );
 if ( !function_exists( 'finest_quickview_button' ) ) {
 	function finest_quickview_button($cart_button) {
 
-        $option = get_theme_mod( 'quickview_option' );
+        $option = get_theme_mod( 'quickview_option','after_add_to_cart' );
 
         $icon = '<span class="dashicons dashicons-visibility"></span>';
 
         $showhide = get_theme_mod( 'on_quick_view', true);
-        $btntext = get_theme_mod( 'change_button_text');
+        $btntext = get_theme_mod( 'change_button_text','Quick View');
         $btnstyle = get_theme_mod( 'qucik_view_style' , 'only_text' );
 
         $mobile_option = get_theme_mod( 'show_quick_buton_mobile', 'mobile_show' );
@@ -58,7 +58,7 @@ if ( !function_exists( 'finest_quickview_button' ) ) {
         }elseif('icon_text' == $btnstyle){
             $f_content = $icon.$btntext;
         }else{
-            $f_content = '';
+            $f_content = $btntext;
         };
 
         if ( true == $showhide ){
