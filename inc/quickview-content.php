@@ -11,6 +11,101 @@ $quantityshow = get_theme_mod( 'on_quantity_view' );
 $metashow = get_theme_mod( 'on_meta_view' );
 $sharingshow = get_theme_mod( 'on_sharing_view' );
 
+//tablet show
+$tabtitle = get_theme_mod( 'tablet_title_show',true );
+$tabrating = get_theme_mod( 'show_rating_on_tablet',true );
+$tabprice = get_theme_mod( 'show_price_on_tablet',true );
+$tabexcerpt = get_theme_mod( 'show_decription_on_table',true );
+$tabquantity = get_theme_mod( 'show_quantity_on_tablet',true );
+$tabmeta = get_theme_mod( 'show_meta_on_tablet',true );
+
+// mobile show
+$mobtitle = get_theme_mod( 'mobile_title_show',true );
+$mobrating = get_theme_mod( 'show_rating_on_mobile',true );
+$mobprice = get_theme_mod( 'show_price_on_mobile',true );
+$mobexcerpt = get_theme_mod( 'show_decription_on_mobile',true );
+$mobquantity = get_theme_mod( 'show_quantity_on_mobile',true );
+$mobmeta = get_theme_mod( 'show_meta_on_mobile',true );
+
+$tbc = '';
+
+if ( true == $tabtitle  ) {
+    $tbc .= "tablet_show";
+}
+else {
+    $tbc .= 'tablet_hide';
+}
+if ( true == $tabrating  ) {
+    $tbc .= ' tablet_show_rating';
+}
+else {
+    $tbc .= ' tablet_hide_rating';
+}
+if ( true == $tabprice  ) {
+    $tbc .= ' tablet_show_price';
+}
+else {
+    $tbc .= ' tablet_hide_price';
+}
+if ( true == $tabexcerpt  ) {
+    $tbc .= ' tablet_show_excerpt';
+}
+else {
+    $tbc .= ' tablet_hide_excerpt';
+}
+if ( true == $tabquantity ) {
+    $tbc .= ' tablet_show_quantity';
+}
+else {
+    $tbc .= ' tablet_hide_quantity';
+}
+if ( true == $tabmeta ) {
+    $tbc .= ' show_meta_on_tablet';
+}
+else {
+    $tbc .= ' hide_meta_on_tablet';
+}
+
+// mobile show
+
+if ( true == $mobtitle  ) {
+    $tbc .= ' mobile_title_show';
+}
+else {
+    $tbc .= ' mobile_title_hide';
+}
+if ( true == $mobrating  ) {
+    $tbc .= ' mobile_show_rating';
+}
+else {
+    $tbc .= ' mobile_hide_rating';
+}
+if ( true == $mobprice  ) {
+    $tbc .= ' mobile_show_price';
+}
+else {
+    $tbc .= ' mobile_hide_price';
+}
+if ( true == $mobexcerpt  ) {
+    $tbc .= ' mobile_show_excerpt';
+}
+else {
+    $tbc .= ' mobile_hide_excerpt';
+}
+if ( true == $mobquantity ) {
+    $tbc .= ' mobile_show_quantity';
+}
+else {
+    $tbc .= ' mobile_hide_quantity';
+}
+if ( true == $mobmeta ) {
+    $tbc .= ' show_meta_on_mobile';
+}
+else {
+    $tbc .= ' hide_meta_on_mobile';
+}
+
+
 global $product;
 $attachment_ids = $product->get_gallery_image_ids() ? $product->get_gallery_image_ids() : array();
 if ( $product->get_image_id() ){
@@ -59,12 +154,12 @@ if ( $product->get_image_id() ){
     </div>
 
     <div class="finest-right-side">
-        <div class="finest-quick-view-right">
+        <div class="finest-quick-view-right <?php echo esc_attr( $tbc ); ?>">
             <?php do_action( 'finest_quick_quickview_before_summary' ); ?>
             <div class="entry-summary">
                 <?php
                    if ( true === $titelshow ) { 
-                     add_action( 'finest_quick_content', 'woocommerce_template_single_title', 5 ); 
+                    add_action( 'finest_quick_content', 'woocommerce_template_single_title', 5 ); 
                     }
                    if ( true === $ratingshow ) {
                     add_action( 'finest_quick_content', 'woocommerce_template_single_rating', 10 );
@@ -85,7 +180,7 @@ if ( $product->get_image_id() ){
                     add_action( 'finest_quick_content', 'woocommerce_template_single_sharing', 50 );
                     }
                     // Render Content
-                    do_action( 'finest_quick_content' );
+                   do_action( 'finest_quick_content' );
                 ?>
             </div><!-- .summary -->
             <?php do_action( 'finest_quick_quickview_after_summary' ); ?>

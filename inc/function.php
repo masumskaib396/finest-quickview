@@ -20,30 +20,34 @@ function finest_quickview_render_infooter() {
 }
 add_action( 'wp_footer', 'finest_quickview_render_infooter' );
 
-$option = get_theme_mod( 'quickview_option' );
-switch ($option) {
-    case 'before_title':
-        add_action( 'woocommerce_shop_loop_item_title', 'finest_quickview_button', 9 );
-        break;
-    case 'after_add_to_cart':
-        add_action( 'woocommerce_after_shop_loop_item', 'finest_quickview_button', 11 );
-        break;
-}
-
+   
+        
 // Button
 if ( !function_exists( 'finest_quickview_button' ) ) {
-	function finest_quickview_button() {
+	function finest_quickview_button($cart_button) {
+        
+        $option = get_theme_mod( 'quickview_option' );
 
         $icon = '<span class="dashicons dashicons-visibility"></span>';
         $showhide = get_theme_mod( 'on_quick_view');
         $btntext = get_theme_mod( 'change_button_text');
         $btnstyle = get_theme_mod( 'qucik_view_style' ,'only_text' );
-        $mobile_option = get_theme_mod( 'mobile_option', 'mobile_show' );
-        $tablate_option = get_theme_mod( 'tablate_option', 'tablate_show' );
+        $mobile_option = get_theme_mod( 'show_quick_buton_mobile', 'mobile_show' );
+        $tablate_option = get_theme_mod( 'show_quick_buton_tablet',true);
 
-        $tb = $mobile_option. ' ' .$tablate_option;
-
-
+        $tb = '';
+        if ( true == $tablate_option ) {
+            $tb .= 'tablate_show';
+        }
+        else {
+            $tb .= 'tablate_hide';
+        }
+        if ( true == $mobile_option ) {
+            $tb .= ' mobile_show';
+        }
+        else {
+            $tb .= ' mobile_hide';
+        }
 
         if('only_text' == $btnstyle){
             $f_content = $btntext;
@@ -58,17 +62,32 @@ if ( !function_exists( 'finest_quickview_button' ) ) {
         if ( true == $showhide ){
         $ajaxurl = admin_url('admin-ajax.php');
         $nonce = wp_create_nonce('stor_product_load');
+            ob_start();
             ?>
-                <div class="finest-quickview-button <?php echo esc_attr( $tb ) ?>">
+                <div class="finest-quickview-button <?php echo esc_attr( $tb .' '. $option); ?>">
                     <a href="#" class="storquickview" data-id="<?php echo get_the_ID() ?>" data-url="<?php echo esc_url($ajaxurl) ?>" data-referrar="<?php echo esc_attr( $nonce ) ?>">
                     <?php echo $f_content; ?>
                     </a>
                 </div>
             <?php
+            $button = ob_get_clean();
+            if ( $option == 'before_add_to_cart' ) {
+                return $button . $cart_button;
+            }
+            else if ( $option == 'after_add_to_cart' ) {
+                return $cart_button . $button;
+            }
+            else if ( $option == 'above_add_to_cart' ) {
+               return $button . $cart_button;
+            }
+            else {
+                return $cart_button . $button;
+            }
         }
 	}
 }
-// add_action('woocommerce_after_shop_loop_item', 'finest_quickview_button', 20);
+
+add_filter( 'woocommerce_loop_add_to_cart_link', 'finest_quickview_button', 15 );
 
 
 // Lode Ajax Content Data
