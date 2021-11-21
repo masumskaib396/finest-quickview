@@ -3,13 +3,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-$titelshow = get_theme_mod( 'on_title_view' );
-$ratingshow = get_theme_mod( 'on_rating_view' );
-$priceshow = get_theme_mod( 'on_price_view' );
-$descshow = get_theme_mod( 'on_decription_view' );
-$quantityshow = get_theme_mod( 'on_quantity_view' );
-$metashow = get_theme_mod( 'on_meta_view' );
-$sharingshow = get_theme_mod( 'on_sharing_view' );
+$titelshow = get_theme_mod( 'on_title_view', true );
+$ratingshow = get_theme_mod( 'on_rating_view', true );
+$priceshow = get_theme_mod( 'on_price_view', true );
+$descshow = get_theme_mod( 'on_decription_view', true );
+$quantityshow = get_theme_mod( 'on_quantity_view', true );
+$metashow = get_theme_mod( 'on_meta_view', true );
+$sharingshow = get_theme_mod( 'on_sharing_view',true );
 
 //tablet show
 $tabtitle = get_theme_mod( 'tablet_title_show',true );

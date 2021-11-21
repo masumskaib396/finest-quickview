@@ -29,9 +29,11 @@ if ( !function_exists( 'finest_quickview_button' ) ) {
         $option = get_theme_mod( 'quickview_option' );
 
         $icon = '<span class="dashicons dashicons-visibility"></span>';
+
         $showhide = get_theme_mod( 'on_quick_view', true);
         $btntext = get_theme_mod( 'change_button_text');
-        $btnstyle = get_theme_mod( 'qucik_view_style' ,'only_text' );
+        $btnstyle = get_theme_mod( 'qucik_view_style' , 'only_text' );
+
         $mobile_option = get_theme_mod( 'show_quick_buton_mobile', 'mobile_show' );
         $tablate_option = get_theme_mod( 'show_quick_buton_tablet',true);
 
