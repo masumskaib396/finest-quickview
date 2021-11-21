@@ -1,10 +1,10 @@
 <?php
 
 // Button Icon
-function finest_quickview_render_infooter() { 
+function finest_quickview_render_infooter() {
     $showhide = get_theme_mod( 'modal_close_button');
     ?>
-    
+
 	<div class="woocommerce" id="fdquick-viewmodal">
         <div class="fdqv-modal-dialog product">
             <div class="fdqv-modal-content">
@@ -16,20 +16,20 @@ function finest_quickview_render_infooter() {
             </div>
         </div>
     </div>';
-<?php        
+<?php
 }
 add_action( 'wp_footer', 'finest_quickview_render_infooter' );
 
-   
-        
+
+
 // Button
 if ( !function_exists( 'finest_quickview_button' ) ) {
 	function finest_quickview_button($cart_button) {
-        
+
         $option = get_theme_mod( 'quickview_option' );
 
         $icon = '<span class="dashicons dashicons-visibility"></span>';
-        $showhide = get_theme_mod( 'on_quick_view');
+        $showhide = get_theme_mod( 'on_quick_view', true);
         $btntext = get_theme_mod( 'change_button_text');
         $btnstyle = get_theme_mod( 'qucik_view_style' ,'only_text' );
         $mobile_option = get_theme_mod( 'show_quick_buton_mobile', 'mobile_show' );

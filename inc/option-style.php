@@ -17,16 +17,19 @@ function fqv_options_scripts(){
 
     $btn_border_radius = get_theme_mod( 'btn_border_radius' );
     $hover_btn_border_radius = get_theme_mod( 'hover_btn_border_radius' );
-    $btn_paddign = get_theme_mod( 'btn_padding' );
-    $paddimpld = implode(' ',$btn_paddign);
+
+    // padding
+    $btn_paddign = get_theme_mod( 'btn_padding' ) != false ? get_theme_mod( 'btn_padding' ) : '' ;
+    $paddimpld = is_array($btn_paddign ) ?  implode(' ', $btn_paddign) : '';
+
     // margin
-    $btn_margin = get_theme_mod( 'btn_margin' );
-    $marimpld = implode(' ',$btn_margin);
+    $btn_margin = get_theme_mod( 'btn_margin' ) != false ? get_theme_mod( 'btn_margin' ) : '';
+    $marimpld = is_array( $btn_margin ) ? implode(' ',$btn_margin) : '';
 
     // modal
-     $mbgcolor = get_theme_mod( 'modal_background_color','#ffffff' );
-    $modal_margin = get_theme_mod( 'modal_margin' );
-    $immodal_margin = implode(' ',$modal_margin);
+    $mbgcolor = get_theme_mod( 'modal_background_color','#ffffff' );
+    $modal_margin = get_theme_mod( 'modal_margin' ) != false ? get_theme_mod( 'modal_margin' ) : '';
+    $immodal_margin =  is_array( $modal_margin ) ?  implode(' ',$modal_margin) : '';
 
     $fqv_dynamic_css  = '';
 

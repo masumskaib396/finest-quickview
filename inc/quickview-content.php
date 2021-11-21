@@ -158,8 +158,8 @@ if ( $product->get_image_id() ){
             <?php do_action( 'finest_quick_quickview_before_summary' ); ?>
             <div class="entry-summary">
                 <?php
-                   if ( true === $titelshow ) { 
-                    add_action( 'finest_quick_content', 'woocommerce_template_single_title', 5 ); 
+                   if ( true === $titelshow ) {
+                    add_action( 'finest_quick_content', 'woocommerce_template_single_title', 5 );
                     }
                    if ( true === $ratingshow ) {
                     add_action( 'finest_quick_content', 'woocommerce_template_single_rating', 10 );
