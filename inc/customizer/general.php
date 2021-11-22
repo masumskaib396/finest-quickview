@@ -396,26 +396,6 @@ Kirki::add_field( 'finest_panel', [
    
 ] );
 
-Kirki::add_field( 'finest_panel', [
-    'type'        => 'switch',
-    'settings'    => 'show_sharing_on_tablet',
-	'label'       => esc_html__( 'Show Sharing On Tablet', 'finest-quickview' ),
-    'section'     => 'finest_settings',
-    'default'     => 'on',
-    'priority'    => 10,
-    'choices'     => [
-        'on'  => esc_html__( 'Enable', 'finest-quickview' ),
-        'off' => esc_html__( 'Disable', 'finest-quickview' ),
-    ],
-    'active_callback' => [
-        [
-            'setting'  => 'modal_content_device',
-            'operator' => '==',
-            'value'    => 'tablet',
-        ]
-    ],
-    
-] );
 
 // tablet device
 Kirki::add_field( 'finest_panel', [
@@ -559,29 +539,9 @@ Kirki::add_field( 'finest_panel', [
         [
             'setting'  => 'modal_content_device',
             'operator' => '==',
-            'value'    => 'tablet',
+            'value'    => 'mobile',
         ]
     ],
    
 ] );
 
-Kirki::add_field( 'finest_panel', [
-    'type'        => 'switch',
-    'settings'    => 'show_sharing_on_mobile',
-	'label'       => esc_html__( 'Show Sharing On Mobile', 'finest-quickview' ),
-    'section'     => 'finest_settings',
-    'default'     => 'on',
-    'priority'    => 10,
-    'choices'     => [
-        'on'  => esc_html__( 'Enable', 'finest-quickview' ),
-        'off' => esc_html__( 'Disable', 'finest-quickview' ),
-    ],
-    'active_callback' => [
-        [
-            'setting'  => 'modal_content_device',
-            'operator' => '==',
-            'value'    => 'mobile',
-        ]
-    ],
-    
-] );

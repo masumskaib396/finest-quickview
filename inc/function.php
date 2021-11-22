@@ -36,7 +36,7 @@ if ( !function_exists( 'finest_quickview_button' ) ) {
 
         $mobile_option = get_theme_mod( 'show_quick_buton_mobile', 'mobile_show' );
         $tablate_option = get_theme_mod( 'show_quick_buton_tablet',true);
-
+        
         $tb = '';
         if ( true == $tablate_option ) {
             $tb .= 'tablate_show';
@@ -66,7 +66,7 @@ if ( !function_exists( 'finest_quickview_button' ) ) {
         $nonce = wp_create_nonce('stor_product_load');
             ob_start();
             ?>
-                <div class="finest-quickview-button <?php echo esc_attr( $tb .' '. $option); ?>">
+                <div class="finest-quickview-button <?php echo esc_attr(  $option.' '.$tb); ?>">
                     <a href="#" class="storquickview" data-id="<?php echo get_the_ID() ?>" data-url="<?php echo esc_url($ajaxurl) ?>" data-referrar="<?php echo esc_attr( $nonce ) ?>">
                     <?php echo $f_content; ?>
                     </a>

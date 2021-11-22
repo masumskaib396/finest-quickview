@@ -396,3 +396,17 @@
 			]
 		],
 	] );
+
+	// custom css
+	Kirki::add_field( 'finest_panel', [
+		'type'        => 'code',
+		'settings'    => 'code_setting',
+		'label'       => esc_html__( 'Custom CSS Use important', 'finest-quickview' ),
+		'description' => esc_html__( 'Use important every css', 'finest-quickview' ),
+		'section'     => 'finest_styles',
+		'default'     => '',
+		'choices'     => [
+			'language' => 'css',
+		],
+	] );
+

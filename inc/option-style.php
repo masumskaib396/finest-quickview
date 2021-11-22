@@ -30,11 +30,17 @@ function fqv_options_scripts(){
     $mbgcolor = get_theme_mod( 'modal_background_color','#ffffff' );
     $modal_margin = get_theme_mod( 'modal_margin' ) != false ? get_theme_mod( 'modal_margin' ) : '';
     $immodal_margin =  is_array( $modal_margin ) ?  implode(' ',$modal_margin) : '';
+    $css = get_theme_mod('code_setting');
 
     $fqv_dynamic_css  = '';
 
+    if($css){
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview { ' . esc_attr( $css ) .' } ';
+        $fqv_dynamic_css .= "\n";
+    }
+
     if($btn_text_color){
-        $fqv_dynamic_css .= '.storquickview { color: ' . esc_attr( $btn_text_color ) . ' } ';
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview { color: ' . esc_attr( $btn_text_color ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
     // hover color
@@ -44,53 +50,53 @@ function fqv_options_scripts(){
     }
 
     if($btn_bg_color){
-        $fqv_dynamic_css .= '.storquickview { background-color: ' . esc_attr( $btn_bg_color ) . ' } ';
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview { background-color: ' . esc_attr( $btn_bg_color ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
     // hover background
 
     if($hover_btn_bg_color){
-        $fqv_dynamic_css .= '.storquickview:hover { background-color: ' . esc_attr( $hover_btn_bg_color ) . ' } ';
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview:hover { background-color: ' . esc_attr( $hover_btn_bg_color ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
     if($hover_btn_border){
-        $fqv_dynamic_css .= '.storquickview:hover { border: ' . esc_attr( $hover_btn_border ) . ' } ';
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview:hover { border: ' . esc_attr( $hover_btn_border ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
     if($btn_hover_border_style){
-        $fqv_dynamic_css .= '.storquickview:hover { border-style: ' . esc_attr( $btn_hover_border_style ) . ' } ';
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview:hover { border-style: ' . esc_attr( $btn_hover_border_style ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
     if($btn_hover_border_color){
-        $fqv_dynamic_css .= '.storquickview:hover { border-color: ' . esc_attr( $btn_hover_border_color ) . ' } ';
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview:hover { border-color: ' . esc_attr( $btn_hover_border_color ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
     if($btn_border){
-        $fqv_dynamic_css .= '.storquickview { border: ' . esc_attr( $btn_border ) . ' } ';
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview { border: ' . esc_attr( $btn_border ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
     if($btn_border_style){
-        $fqv_dynamic_css .= '.storquickview { border-style: ' . esc_attr( $btn_border_style ) . ' } ';
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview { border-style: ' . esc_attr( $btn_border_style ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
     if($btn_border_color){
-        $fqv_dynamic_css .= '.storquickview { border-color: ' . esc_attr( $btn_border_color ) . ' } ';
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview { border-color: ' . esc_attr( $btn_border_color ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
     if($marimpld){
-        $fqv_dynamic_css .= '.storquickview { margin: ' . esc_attr( $marimpld ) . ' } ';
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview { margin: ' . esc_attr( $marimpld ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
     if($paddimpld){
-        $fqv_dynamic_css .= '.storquickview { padding: ' . esc_attr( $paddimpld ) . ' } ';
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview { padding: ' . esc_attr( $paddimpld ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
     if($btn_border_radius){
-        $fqv_dynamic_css .= '.storquickview {  border-radius: ' . esc_attr( $btn_border_radius ) . ' } ';
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview {  border-radius: ' . esc_attr( $btn_border_radius ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
     if($hover_btn_border_radius){
-        $fqv_dynamic_css .= '.storquickview:hover {  border-radius: ' . esc_attr( $hover_btn_border_radius ) . ' } ';
+        $fqv_dynamic_css .= '.finest-quickview-button .storquickview:hover {  border-radius: ' . esc_attr( $hover_btn_border_radius ) . ' } ';
         $fqv_dynamic_css .= "\n";
     }
 
