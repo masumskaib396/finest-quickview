@@ -61,16 +61,17 @@ if ( !function_exists( 'finest_quickview_button' ) ) {
             $f_content = $btntext;
         };
 
-        if ( true == $showhide ){
         $ajaxurl = admin_url('admin-ajax.php');
         $nonce = wp_create_nonce('stor_product_load');
             ob_start();
             ?>
+            <?php if ( true == $showhide ) { ?>
                 <div class="finest-quickview-button <?php echo esc_attr(  $option.' '.$tb); ?>">
                     <a href="#" class="storquickview" data-id="<?php echo get_the_ID() ?>" data-url="<?php echo esc_url($ajaxurl) ?>" data-referrar="<?php echo esc_attr( $nonce ) ?>">
                     <?php echo $f_content; ?>
                     </a>
                 </div>
+                <?php } ?>
             <?php
             $button = ob_get_clean();
             if ( $option == 'before_add_to_cart' ) {
@@ -85,7 +86,7 @@ if ( !function_exists( 'finest_quickview_button' ) ) {
             else {
                 return $cart_button . $button;
             }
-        }
+        
 	}
 }
 
