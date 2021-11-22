@@ -3,8 +3,8 @@
 Plugin Name: WooCommerce Quick View
 Plugin URI: https://github.com/masumskaib396/finest-quickview
 Description: WooCommerce Quick View plugin is a simple and clean design.
-Version: 1.0.0
-Author: finestwp
+Version: 1.1.0
+Author: FinestWP
 Author URI: http://finestdevs.com
 License: GPLv2
 Text Domain: finest-quickview
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 //Set plugin version constant.
-define( 'FINEST_QUICKVIEW_VERSION', '1.0.0');
+define( 'FINEST_QUICKVIEW_VERSION', '1.1.0');
 
 define( 'FINEST_QUICKVIEW_INC', plugin_dir_path( __FILE__ ) . 'inc/' );
 define( 'FINEST_QUICKVIEW_MAIN', trailingslashit( plugin_dir_path( __FILE__ ) ) );

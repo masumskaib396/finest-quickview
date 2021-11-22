@@ -7,7 +7,7 @@ Tested up to: 5.8.1
 Requires PHP: 5.6
 License: GPl V2
 License URI: https://www.gnu.org/licenses/old-lic.enses/gpl-2.0.en.html
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 
 
 == Description ==
@@ -46,6 +46,11 @@ We help you stand out amidst the vast crowd of eCommerce sites in the world with
 == Installation ==
 Installation is fairly straight forward. Install it from the WordPress plugin repository.
 
+== Changelog ==
+
+= 1.1.0 =
+* Adding Option Panel
 
 = 1.0.0 =
 * Initial Release
+
