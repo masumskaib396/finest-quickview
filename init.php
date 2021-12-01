@@ -38,6 +38,3 @@ if ( file_exists( FINEST_QUICKVIEW_INC . 'customizer/config.php' ) ) {
 	require_once  FINEST_QUICKVIEW_INC . 'customizer/config.php';
 }
 
-
-
-

@@ -56,3 +56,23 @@ if ( file_exists(  FINEST_QUICKVIEW_MAIN . 'init.php' ) ) {
 
 
 
+/**
+ * Initialize the plugin tracker
+ *
+ * @return void
+ */
+function appsero_init_tracker_finest_quickview() {
+
+  if ( ! class_exists( 'Appsero\Client' ) ) {
+    require_once FINEST_QUICKVIEW_MAIN . '/inc/appsero/src/Client.php';
+  }
+
+  $client = new Appsero\Client( '9f6127b5-4e3f-4571-8fe5-db6b1628006c', 'WooCommerce Quick View', __FILE__ );
+
+  // Active insights
+  $client->insights()->init();
+
+}
+appsero_init_tracker_finest_quickview();
+
+
